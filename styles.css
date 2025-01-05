@@ -1,79 +1,86 @@
-/* General Styles */
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
 }
 
-/* Header */
+h1, h2 {
+    color: #2c3e50;
+}
+
+/* Header Styles */
 header {
-    background: #0078d7;
+    background-color: #1abc9c;
     color: #fff;
-    padding: 20px 10px;
-    text-align: center;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 header h1 {
+    font-size: 1.8rem;
     margin: 0;
-}
-
-header p {
-    font-size: 1.2em;
-}
-
-/* Navigation */
-nav {
-    background: #333;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: center;
 }
 
 nav ul li {
-    margin: 0;
+    margin-left: 20px;
 }
 
 nav ul li a {
-    display: block;
-    padding: 10px 20px;
     color: #fff;
     text-decoration: none;
-    transition: background 0.3s;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background: #575757;
+    color: #16a085;
 }
 
-/* Main Content */
-main {
-    padding: 20px;
+/* Section Styles */
+.section {
+    padding: 2rem 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-section {
-    margin-bottom: 20px;
+.section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-section h2 {
-    color: #0078d7;
-    border-bottom: 2px solid #0078d7;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+.section p {
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
     text-align: center;
-    background: #333;
+    background: #2c3e50;
     color: #fff;
-    padding: 10px 0;
-    margin-top: 20px;
+    padding: 1rem 0;
+    margin-top: 1rem;
 }

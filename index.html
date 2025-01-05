@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>High-Styled Website</title>
-    <title>Welcome to Project</title>
+    <title>Project D</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,27 +12,46 @@
             <h1>Project D</h1>
             <nav>
                 <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section id="about" class="section">
-            <h2>About Us</h2>
-            <p>Welcome to Project D! We aim to provide information that matters to the public, ensuring accessibility and transparency.</p>
-        </section>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Project D</h2>
+            <p>Your resource for innovative hydrogen-powered bike conversion</p>
+            <a href="#about" class="cta-btn">Learn More</a>
+        </div>
+    </section>
 
-        <section id="contact" class="section">
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Project D</h2>
+            <p>Project D aims to revolutionize transportation by converting petrol-powered bikes to hydrogen-powered ones using cutting-edge technology. Follow our journey as we innovate and optimize the conversion process for eco-friendly and sustainable transportation solutions.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
             <h2>Contact Us</h2>
-            <p>Have questions or feedback? Reach out to us at <a href="mailto:info@projectd.com">info@projectd.com</a>.</p>
-        </section>
-    </main>
+            <p>If you have any questions or would like to get involved, feel free to reach out!</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2025 Project D. All Rights Reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Project D. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>

@@ -23,7 +23,7 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -53,18 +53,41 @@ header nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: url('https://via.placeholder.com/1600x800') center/cover no-repeat;
-    height: 400px;
+    border-radius: 5px;
+    height: 300px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
 }
 
-.hero .hero-content {
+.hero .hero-content{
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
+}
+
+.domain{
+        border: solid 5px rgb(105, 104, 104);
+        height: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+
+.domain .sub_domain{
+    border: solid 5px rgb(255, 43, 43);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    text-align: center;
 }
 
 .hero h2 {

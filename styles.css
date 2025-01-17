@@ -1,4 +1,3 @@
-/* Reset Styles */
 * {
     margin: 0;
     padding: 0;
@@ -90,7 +89,7 @@ header {
 }
 
 .image-link img {
-    width: 100%;
+    width: 50%;
     height: auto;
     transition: transform 0.5s ease, filter 0.5s ease;
 }
@@ -133,4 +132,36 @@ header {
 .hover-overlay span:hover {
     transform: scale(1.1);
     background-color: #e63946;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon i {
+    font-size: 1.5rem;
+}
+
+.social-icon:hover {
+    color: #ff6b6b;
 }

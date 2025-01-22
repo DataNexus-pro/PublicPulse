@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
+    <style>
+        /* Overlay style */
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            z-index: 9999;
+        }
+
+        /* Main content style */
+        #main-content {
+            display: none; /* Hidden initially */
+        }
+    </style>
+
     <script>
         // Check if the user is logged in (for example, using localStorage)
         window.onload = function() {
@@ -15,99 +38,119 @@
                 window.location.href = 'login.html';
             }
         };
+
+        // Function to remove overlay and display the main content
+        function removeOverlay() {
+            document.getElementById('overlay').style.display = 'none';  // Hide the overlay
+            document.getElementById('main-content').style.display = 'block';  // Show the content
+        }
+
+        // Detect user interaction (click or keypress)
+        document.body.addEventListener('click', removeOverlay);  // Click event
+        document.body.addEventListener('keypress', removeOverlay);  // Key press event (optional)
     </script>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1 style="text-align: left;">Welcome to DataNexus-Pro</h1>
-        <nav class="contact-info">
-            <a href="index.html">Home</a>
-            <a href="login.html">Login</a>
-            <a href="contact.html">Contact</a>
+    <!-- Overlay that covers the page until user interacts -->
+    <div id="overlay">
+        <span>Please click or press any key to continue...</span>
+    </div>
+
+    <!-- Main Content Section (hidden initially) -->
+    <div id="main-content">
+
+        <!-- Header Section -->
+        <header>
+            <h1 style="text-align: left;">Welcome to DataNexus-Pro</h1>
+            <nav class="contact-info">
+                <a href="index.html">Home</a>
+                <a href="login.html">Login</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav class="nav-bar">
+            <a href="education.html">Education</a>
+            <a href="competitive.html">Competitive Exams</a>
+            <a href="ieee.html">IEEE Papers</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="technews.html">Tech News</a>
+            <a href="health.html">Health</a>
         </nav>
-    </header>
 
-    <!-- Navigation Bar -->
-    <nav class="nav-bar">
-        <a href="education.html">Education</a>
-        <a href="competitive.html">Competitive Exams</a>
-        <a href="ieee.html">IEEE Papers</a>
-        <a href="jobs.html">Jobs</a>
-        <a href="technews.html">Tech News</a>
-        <a href="health.html">Health</a>
-    </nav>
+        <!-- Subdomains Section -->
+        <section class="subdomains">
+            <div class="subdomain">
+                <a href="education.html" class="image-link">
+                    <img src="https://www.paramporulfoundation.com/wp-content/uploads/2024/07/How-Can-We-Reimagine-Education-to-Address-the-Unseen-Crisis.jpeg" alt="Education">
+                    <div class="hover-overlay">
+                        <span>Explore Education</span>
+                    </div>
+                </a>
+            </div>
+            <div class="subdomain">
+                <a href="competative.html" class="image-link">
+                    <img src="https://nhpuc.in/wp-content/uploads/2024/08/Compitetive-Exams2.jpg" alt="Competitive Exams">
+                    <div class="hover-overlay">
+                        <span>Explore Exams</span>
+                    </div>
+                </a>
+            </div>
+            <div class="subdomain">
+                <a href="ieee.html" class="image-link">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/IEEE_logo.svg/1200px-IEEE_logo.svg.png" alt="IEEE Papers">
+                    <div class="hover-overlay">
+                        <span>Explore IEEE Papers</span>
+                    </div>
+                </a>
+            </div>
+            <div class="subdomain">
+                <a href="jobs.html" class="image-link">
+                    <img src="https://images.hindi.news18.com/ibnkhabar/uploads/2021/12/trending-jobs-in-india-16399126763x2.jpg" alt="Jobs">
+                    <div class="hover-overlay">
+                        <span>Discover Jobs</span>
+                    </div>
+                </a>
+            </div>
+            <div class="subdomain">
+                <a href="technews.html" class="image-link">
+                    <img src="https://assets.thehansindia.com/h-upload/2021/05/25/1078280-tech.webp" alt="Tech News">
+                    <div class="hover-overlay">
+                        <span>Read Tech News</span>
+                    </div>
+                </a>
+            </div>
+            <div class="subdomain">
+                <a href="health.html" class="image-link">
+                    <img src="https://cms-api-in.myhealthcare.co/image/20220910103120.jpeg" alt="Health">
+                    <div class="hover-overlay">
+                        <span>Explore Health</span>
+                    </div>
+                </a>
+            </div>
+        </section>
 
-    <!-- Subdomains Section -->
-    <section class="subdomains">
-        <div class="subdomain">
-            <a href="education.html" class="image-link">
-                <img src="https://www.paramporulfoundation.com/wp-content/uploads/2024/07/How-Can-We-Reimagine-Education-to-Address-the-Unseen-Crisis.jpeg" alt="Education">
-                <div class="hover-overlay">
-                    <span>Explore Education</span>
-                </div>
-            </a>
-        </div>
-        <div class="subdomain">
-            <a href="competative.html" class="image-link">
-                <img src="https://nhpuc.in/wp-content/uploads/2024/08/Compitetive-Exams2.jpg" alt="Competitive Exams">
-                <div class="hover-overlay">
-                    <span>Explore Exams</span>
-                </div>
-            </a>
-        </div>
-        <div class="subdomain">
-            <a href="ieee.html" class="image-link">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/IEEE_logo.svg/1200px-IEEE_logo.svg.png" alt="IEEE Papers">
-                <div class="hover-overlay">
-                    <span>Explore IEEE Papers</span>
-                </div>
-            </a>
-        </div>
-        <div class="subdomain">
-            <a href="jobs.html" class="image-link">
-                <img src="https://images.hindi.news18.com/ibnkhabar/uploads/2021/12/trending-jobs-in-india-16399126763x2.jpg" alt="Jobs">
-                <div class="hover-overlay">
-                    <span>Discover Jobs</span>
-                </div>
-            </a>
-        </div>
-        <div class="subdomain">
-            <a href="technews.html" class="image-link">
-                <img src="https://assets.thehansindia.com/h-upload/2021/05/25/1078280-tech.webp" alt="Tech News">
-                <div class="hover-overlay">
-                    <span>Read Tech News</span>
-                </div>
-            </a>
-        </div>
-        <div class="subdomain">
-            <a href="health.html" class="image-link">
-                <img src="https://cms-api-in.myhealthcare.co/image/20220910103120.jpeg" alt="Health">
-                <div class="hover-overlay">
-                    <span>Explore Health</span>
-                </div>
-            </a>
-        </div>
-    </section>
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="social-media">
+                <a href="https://chat.whatsapp.com/J9fUwrFAJZsEQ5JmgNry74" target="_blank" class="social-icon">
+                    <i class="fab fa-whatsapp-square"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://instagram.com/" target="_blank" class="social-icon">
+                    <i class="fab fa-youtube-square"></i>
+                    <span>YouTube</span>
+                </a>
+                <a href="https://t.me/" target="_blank" class="social-icon">
+                    <i class="fab fa-envelope-open-text"></i>
+                    <span>Gmail</span>
+                </a>
+            </div>
+        </footer>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="social-media">
-            <a href="https://chat.whatsapp.com/J9fUwrFAJZsEQ5JmgNry74" target="_blank" class="social-icon">
-                <i class="fab fa-whatsapp-square"></i>
-                <span>WhatsApp</span>
-            </a>
-            <a href="https://instagram.com/" target="_blank" class="social-icon">
-                <i class="fab fa-youtube-square"></i>
-                <span>YouTube</span>
-            </a>
-            <a href="https://t.me/" target="_blank" class="social-icon">
-                <i class="fab fa-envelope-open-text"></i>
-                <span>Gmail</span>
-            </a>
-        </div>
-    </footer>
+    </div>
 
 </body>
 </html>

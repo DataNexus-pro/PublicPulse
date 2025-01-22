@@ -17,10 +17,15 @@
             // Add an event listener to each link
             links.forEach(link => {
                 link.addEventListener('click', function(event) {
-                    // Prevent the default link behavior
-                    event.preventDefault();
-                    // Redirect to login page
-                    window.location.href = 'login.html';
+                    // Check if the clicked link is within the header or footer sections
+                    const isHeaderOrFooter = link.closest('header') || link.closest('footer');
+                    
+                    if (!isHeaderOrFooter) {
+                        // Prevent the default link behavior if not in header/footer
+                        event.preventDefault();
+                        // Redirect to login page
+                        window.location.href = 'login.html';
+                    }
                 });
             });
         });
@@ -105,15 +110,15 @@
     <footer class="footer">
         <div class="social-media">
             <a href="https://chat.whatsapp.com/J9fUwrFAJZsEQ5JmgNry74" target="_blank" class="social-icon">
-                <i class="fab fa-whatsapp"></i>
+                <i class="fab fa-whatsapp-square"></i>
                 <span>WhatsApp</span>
             </a>
-            <a href="https://YouTube.com/" target="_blank" class="social-icon">
-                <i class="fab fa-youtube"></i>
+            <a href="https://instagram.com/" target="_blank" class="social-icon">
+                <i class="fab fa-youtube-square"></i>
                 <span>YouTube</span>
             </a>
             <a href="https://t.me/" target="_blank" class="social-icon">
-                <i class="fab fa-envelope"></i>
+                <i class="fab fa-envelope-open-text"></i>
                 <span>Gmail</span>
             </a>
         </div>

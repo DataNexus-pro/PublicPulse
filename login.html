@@ -14,35 +14,32 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg,rgb(25, 78, 81), #333);
+            background-color: #f4f7fc; /* Light, professional background */
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #fff;
-            overflow: hidden;
+            color: #333;
         }
 
         /* Container Styling */
         .container {
-            background: rgba(255, 255, 255, 0.1);
+            background: #ffffff;
             padding: 40px;
             border-radius: 10px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(10px);
-            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 400px;
-            transform: translateY(-50px);
-            animation: fadeIn 1.2s ease-out forwards;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
         }
 
         /* Title */
         .container h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            opacity: 0;
-            animation: fadeIn 1s ease-in-out 0.5s forwards;
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 25px;
+            font-weight: 600;
         }
 
         /* Input Fields */
@@ -54,20 +51,22 @@
         .input-field input {
             width: 100%;
             padding: 15px;
-            border: none;
-            border-radius: 30px;
-            background: rgba(255, 255, 255, 0.2);
-            color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #f9f9f9;
+            color: #333;
             font-size: 1rem;
             outline: none;
-            transition: background 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
         }
 
         .input-field input:focus {
-            background: rgba(255, 255, 255, 0.4);
+            border-color: #3b82f6;
+            background: #ffffff;
         }
-        .input-field input::placeholder{
-           color: #fff;
+
+        .input-field input::placeholder {
+            color: #aaa;
         }
 
         /* Button */
@@ -88,23 +87,11 @@
             transform: scale(1.05);
         }
 
-        /* Transition Effects */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         /* Small Text */
         .small-text {
-            margin-top: 10px;
+            margin-top: 15px;
             font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
+            color: #555;
         }
 
         .small-text a {
@@ -116,10 +103,33 @@
         .small-text a:hover {
             color: #2563eb;
         }
+
+        /* Image Styling */
+        .logo {
+            width: 100px;  /* Adjust width to fit */
+            margin-bottom: 20px;
+        }
+
+        /* Animation for form fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Logo Section: Add your Google link image URL here -->
+        <img src="logo.png" alt="Google Logo" class="logo">
+
+        <h2>Welcome Back</h2>
         <form>
             <div class="input-field">
                 <input type="email" placeholder="Email" required>

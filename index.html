@@ -7,31 +7,6 @@
     <link rel="icon" href="logo.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
-
-    <!-- JavaScript to handle the redirection -->
-    <script>
-        // Wait for the DOM to fully load
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get all anchor tags
-            const links = document.querySelectorAll('a');
-
-            // Add an event listener to each link
-            links.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    // Check if the clicked link is within the header or footer sections
-                    const isHeaderOrFooter = link.closest('header') || link.closest('footer');
-                    
-                    if (!isHeaderOrFooter) {
-                        // Prevent the default link behavior if not in header/footer
-                        event.preventDefault();
-                        // Redirect to login page
-                        window.location.href = 'login.html';
-                    }
-                });
-            });
-        });
-    </script>
-
 </head>
 <body>
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
     <style>
         /* General styles for the page */
         body {
@@ -112,15 +113,36 @@
         }
 
         /* Footer style */
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+        .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon i {
+    font-size: 1.5rem;
+}
+
+.social-icon:hover {
+    color: #ff6b6b;
+}
     </style>
 </head>
 <body>
@@ -268,8 +290,21 @@
         </section>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Educational Portal. All rights reserved.</p>
+    <footer class="footer">
+        <div class="social-media">
+            <a href="https://whatsapp.com/channel/0029Vayz9d3KQuJNblnYq03A" target="_blank" class="social-icon">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="https://youtube.com/@datanexus-pro?si=Ijwvs9Na-fFRsD-n" target="_blank" class="social-icon">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+            </a>
+            <a href="mailto:datanexuspro@gmail.com" target="_blank" class="social-icon">
+                <i class="far fa-envelope"></i>
+                <span>Email</span>
+            </a>
+        </div>
     </footer>
 
 </body>

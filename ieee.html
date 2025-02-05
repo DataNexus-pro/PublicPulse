@@ -3,118 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload IEEE Papers</title>
+    <title>IEEE Papers</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+        /* Basic Reset */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        header {
-            background-color: #0044cc;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        .container {
-            width: 80%;
-            margin: 30px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            text-align: center;
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
             color: #333;
         }
-        .upload-section {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+
+        /* Header */
+        header {
+            background-color: #0044cc;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
         }
-        .upload-section label {
-            font-size: 16px;
-            color: #555;
+
+        header h1 {
+            margin-bottom: 10px;
         }
-        .upload-section input[type="file"] {
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            background-color: #fafafa;
-        }
-        .upload-section input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .upload-section input[type="submit"]:hover {
-            background-color: #218838;
-        }
-        .paper-list {
-            margin-top: 30px;
-        }
-        .paper-list ul {
+
+        nav ul {
             list-style: none;
-            padding-left: 0;
+            padding: 0;
         }
-        .paper-list li {
-            background-color: #f9f9f9;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 5px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
         }
-        .paper-list li a {
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            margin-bottom: 15px;
+        }
+
+        section p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li a {
             color: #0044cc;
             text-decoration: none;
-            font-weight: bold;
         }
-        .paper-list li a:hover {
-            text-decoration: underline;
+
+        /* Search Form */
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        form input[type="text"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        form button {
+            padding: 10px;
+            background-color: #0044cc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #0033aa;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>IEEE Paper Upload</h1>
-    </header>
-    <div class="container">
-        <h2>Upload New IEEE Paper</h2>
-        <div class="upload-section">
-            <label for="paperTitle">Paper Title:</label>
-            <input type="text" id="paperTitle" name="paperTitle" placeholder="Enter the paper title" required>
-
-            <label for="paperFile">Choose Paper File:</label>
-            <input type="file" id="paperFile" name="paperFile" accept=".pdf, .docx, .txt" required>
-
-            <input type="submit" value="Upload Paper">
-        </div>
-
-        <div class="paper-list">
-            <h2>Uploaded Papers</h2>
+        <h1>IEEE Papers and Resources</h1>
+        <nav>
             <ul>
-                <li>
-                    <span>IEEE Paper 1</span>
-                    <a href="#">Download</a>
-                </li>
-                <li>
-                    <span>IEEE Paper 2</span>
-                    <a href="#">Download</a>
-                </li>
-                <li>
-                    <span>IEEE Paper 3</span>
-                    <a href="#">Download</a>
-                </li>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#sources">IEEE Paper Sources</a></li>
+                <li><a href="#search">Search Papers</a></li>
             </ul>
-        </div>
-    </div>
+        </nav>
+    </header>
+
+    <section id="intro">
+        <h2>What are IEEE Papers?</h2>
+        <p>
+            IEEE (Institute of Electrical and Electronics Engineers) papers are scholarly articles and research papers published by the IEEE on various topics related to electrical, electronics, and computer engineering. These papers are widely cited and serve as important references in the field of engineering and technology.
+        </p>
+    </section>
+
+    <section id="sources">
+        <h2>Popular IEEE Paper Sources</h2>
+        <ul>
+            <li><a href="https://ieeexplore.ieee.org/" target="_blank">IEEE Xplore Digital Library</a></li>
+            <li><a href="https://www.ieee.org/publications/standards/publications.html" target="_blank">IEEE Standards</a></li>
+            <li><a href="https://www.researchgate.net/" target="_blank">ResearchGate (for IEEE papers)</a></li>
+            <li><a href="https://www.sciencedirect.com/journal/ieee-transactions-on-computers" target="_blank">IEEE Transactions on Computers</a></li>
+        </ul>
+    </section>
+
+    <section id="search">
+        <h2>Search IEEE Papers</h2>
+        <form action="https://ieeexplore.ieee.org/Xplore/home.jsp" method="get" target="_blank">
+            <label for="search-query">Search IEEE Papers:</label>
+            <input type="text" id="search-query" name="queryText" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 IEEE Paper Resources. All rights reserved.</p>
+    </footer>
 </body>
 </html>

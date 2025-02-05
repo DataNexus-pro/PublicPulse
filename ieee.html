@@ -3,9 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ieee-papers</title>
+    <title>Upload IEEE Papers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0044cc;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .upload-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .upload-section label {
+            font-size: 16px;
+            color: #555;
+        }
+        .upload-section input[type="file"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #fafafa;
+        }
+        .upload-section input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .upload-section input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .paper-list {
+            margin-top: 30px;
+        }
+        .paper-list ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .paper-list li {
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .paper-list li a {
+            color: #0044cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .paper-list li a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>ieee-papers</h1>
+    <header>
+        <h1>IEEE Paper Upload</h1>
+    </header>
+    <div class="container">
+        <h2>Upload New IEEE Paper</h2>
+        <div class="upload-section">
+            <label for="paperTitle">Paper Title:</label>
+            <input type="text" id="paperTitle" name="paperTitle" placeholder="Enter the paper title" required>
+
+            <label for="paperFile">Choose Paper File:</label>
+            <input type="file" id="paperFile" name="paperFile" accept=".pdf, .docx, .txt" required>
+
+            <input type="submit" value="Upload Paper">
+        </div>
+
+        <div class="paper-list">
+            <h2>Uploaded Papers</h2>
+            <ul>
+                <li>
+                    <span>IEEE Paper 1</span>
+                    <a href="#">Download</a>
+                </li>
+                <li>
+                    <span>IEEE Paper 2</span>
+                    <a href="#">Download</a>
+                </li>
+                <li>
+                    <span>IEEE Paper 3</span>
+                    <a href="#">Download</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>

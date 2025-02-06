@@ -3,9 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>technews</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tech News & Engineering Jobs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-icon {
+        text-decoration: none;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+    }
+
+    .social-icon i {
+        font-size: 1.5rem;
+    }
+
+    .social-icon:hover {
+        color: #ff6b6b;
+    }
+
+        h2 {
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    <h1>Technews</h1>
+    <header>
+        <h1>Welcome to Tech News & Engineering Jobs</h1>
+        <nav>
+            <ul>
+                <li><a href="#tech-news">Tech News</a></li>
+                <li><a href="#engineering-jobs">Engineering Jobs</a></li>
+                <li><a href="#internships">Internships</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="tech-news">
+        <h2>Latest Tech News</h2>
+        <div id="tech-news-feed">
+            <!-- Tech news feed will be displayed here -->
+        </div>
+    </section>
+
+    <section id="engineering-jobs">
+        <h2>Engineering Jobs</h2>
+        <div id="engineering-jobs-list">
+            <!-- Engineering job updates will be displayed here -->
+        </div>
+    </section>
+
+    <section id="internships">
+        <h2>Internship Opportunities</h2>
+        <div id="internships-list">
+            <!-- Internship updates will be displayed here -->
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="social-media">
+            <a href="https://whatsapp.com/channel/0029Vayz9d3KQuJNblnYq03A" target="_blank" class="social-icon">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="https://youtube.com/@datanexus-pro?si=Ijwvs9Na-fFRsD-n" target="_blank" class="social-icon">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+            </a>
+            <a href="mailto:datanexuspro@gmail.com" target="_blank" class="social-icon">
+                <i class="far fa-envelope"></i>
+                <span>Email</span>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Example function to fetch tech news and display it dynamically
+        document.addEventListener('DOMContentLoaded', function () {
+            fetchTechNews();
+            fetchEngineeringJobs();
+            fetchInternships();
+        });
+
+        // Function to fetch Tech News
+        function fetchTechNews() {
+            // This could be a real API request like to newsapi.org or any other tech news API.
+            let techNewsFeed = [
+                { title: "New AI Developments Changing the Tech Industry", link: "https://techcrunch.com/ai" },
+                { title: "Quantum Computing Breakthroughs in 2025", link: "https://www.theverge.com/quantum-computing" }
+            ];
+
+            let feedContainer = document.getElementById('tech-news-feed');
+            techNewsFeed.forEach(news => {
+                let newsItem = document.createElement('p');
+                newsItem.innerHTML = `<a href="${news.link}" target="_blank">${news.title}</a>`;
+                feedContainer.appendChild(newsItem);
+            });
+        }
+
+        // Function to fetch Engineering Jobs
+        function fetchEngineeringJobs() {
+            let engineeringJobs = [
+                { title: "Software Engineer at XYZ Corp", link: "https://xyzcorp.com/jobs/software-engineer" },
+                { title: "Mechanical Engineer at ABC Ltd.", link: "https://abcltd.com/jobs/mechanical-engineer" }
+            ];
+
+            let jobContainer = document.getElementById('engineering-jobs-list');
+            engineeringJobs.forEach(job => {
+                let jobItem = document.createElement('p');
+                jobItem.innerHTML = `<a href="${job.link}" target="_blank">${job.title}</a>`;
+                jobContainer.appendChild(jobItem);
+            });
+        }
+
+        // Function to fetch Internships
+        function fetchInternships() {
+            let internships = [
+                { title: "AI Internship at Techies Inc.", link: "https://techies.com/internships/ai" },
+                { title: "Mechanical Engineering Internship at BuildIt", link: "https://buildit.com/internships/mechanical" }
+            ];
+
+            let internshipContainer = document.getElementById('internships-list');
+            internships.forEach(internship => {
+                let internshipItem = document.createElement('p');
+                internshipItem.innerHTML = `<a href="${internship.link}" target="_blank">${internship.title}</a>`;
+                internshipContainer.appendChild(internshipItem);
+            });
+        }
+    </script>
 </body>
 </html>

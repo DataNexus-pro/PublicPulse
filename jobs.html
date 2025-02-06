@@ -3,9 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jobs</title>
+    <title>Job Opportunities</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Intro Section */
+        .intro {
+            background-color: #e0e0e0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .intro h2 {
+            margin: 0;
+        }
+
+        /* Job Listings Section */
+        .job-listings,
+        .competitive-exams {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .job-listings h3,
+        .competitive-exams h3 {
+            text-align: center;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Section */
+        .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon i {
+    font-size: 1.5rem;
+}
+
+.social-icon:hover {
+    color: #ff6b6b;
+}
+
+    </style>
 </head>
 <body>
-    <h1>jobs</h1>
+    <header>
+        <h1>Job Opportunities</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="intro">
+        <h2>Latest Job Listings</h2>
+        <p>Find your dream job from the latest listings. Don't miss out on new opportunities!</p>
+    </section>
+
+    <section class="job-listings">
+        <h3>Job Alerts</h3>
+        <ul>
+            <li><a href="https://www.indeed.com" target="_blank">Indeed - Latest Jobs</a></li>
+            <li><a href="https://www.linkedin.com/jobs" target="_blank">LinkedIn - Job Listings</a></li>
+            <li><a href="https://www.naukri.com" target="_blank">Naukri - Jobs in India</a></li>
+            <li><a href="https://www.monster.com" target="_blank">Monster - Global Job Search</a></li>
+        </ul>
+    </section>
+
+    <section class="competitive-exams">
+        <h3>Competitive Exams & Government Jobs</h3>
+        <ul>
+            <li><a href="https://www.upsc.gov.in" target="_blank">UPSC - Union Public Service Commission</a></li>
+            <li><a href="https://www.ssc.nic.in" target="_blank">SSC - Staff Selection Commission</a></li>
+            <li><a href="https://www.ibps.in" target="_blank">IBPS - Institute of Banking Personnel Selection</a></li>
+            <li><a href="https://www.bankersadda.com" target="_blank">Bankers Adda - Banking Jobs & Exam Alerts</a></li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <div class="social-media">
+            <a href="https://whatsapp.com/channel/0029Vayz9d3KQuJNblnYq03A" target="_blank" class="social-icon">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="https://youtube.com/@datanexus-pro?si=Ijwvs9Na-fFRsD-n" target="_blank" class="social-icon">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+            </a>
+            <a href="mailto:datanexuspro@gmail.com" target="_blank" class="social-icon">
+                <i class="far fa-envelope"></i>
+                <span>Email</span>
+            </a>
+        </div>
+    </footer>
 </body>
 </html>

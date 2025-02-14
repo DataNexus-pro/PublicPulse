@@ -3,43 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tHealth</title>
+    <title>Health</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
     <style>
-            .footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
-    .social-media {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
-    .social-icon {
-        text-decoration: none;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 1.2rem;
-        transition: color 0.3s ease;
-    }
+        header h1 {
+            margin: 0;
+        }
 
-    .social-icon i {
-        font-size: 1.5rem;
-    }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-    .social-icon:hover {
-        color: #ff6b6b;
-    }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icon {
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon i {
+            font-size: 1.5rem;
+        }
+
+        .social-icon:hover {
+            color: #ff6b6b;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .video-container iframe {
+            flex: 1 1 calc(33.333% - 20px);
+            height: 200px;
+            border: none;
+        }
+
+        .food-menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .food-item {
+            flex: 1 1 calc(33.333% - 20px);
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .food-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .food-item h3 {
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
-    <h1>Health</h1>
+    <header>
+        <h1>Health</h1>
+    </header>
+
+    <section id="exercise-tips">
+        <h2>Exercise Tips</h2>
+        <ul>
+            <li>Start with a warm-up to get your muscles ready.</li>
+            <li>Incorporate both cardio and strength training into your routine.</li>
+            <li>Stay hydrated and drink plenty of water.</li>
+            <li>Listen to your body and avoid overexertion.</li>
+            <li>Cool down and stretch after your workout.</li>
+        </ul>
+    </section>
+
+    <section id="diet-food">
+        <h2>Diet Food</h2>
+        <ul>
+            <li>Include a variety of fruits and vegetables in your diet.</li>
+            <li>Choose whole grains over refined grains.</li>
+            <li>Opt for lean proteins such as chicken, fish, and legumes.</li>
+            <li>Limit your intake of added sugars and saturated fats.</li>
+            <li>Stay hydrated by drinking plenty of water.</li>
+        </ul>
+    </section>
+
+    <section id="health-videos">
+        <h2>Related Health Videos</h2>
+        <div class="video-container" id="video-container">
+            <!-- Videos will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <section id="food-menu">
+        <h2>Food Menu</h2>
+        <div class="food-menu">
+            <div class="food-item">
+                <img src="https://via.placeholder.com/150" alt="Food 1">
+                <h3>Grilled Chicken Salad</h3>
+                <p>A healthy mix of grilled chicken, fresh vegetables, and a light dressing.</p>
+            </div>
+            <div class="food-item">
+                <img src="https://via.placeholder.com/150" alt="Food 2">
+                <h3>Quinoa Bowl</h3>
+                <p>A nutritious bowl of quinoa, black beans, corn, and avocado.</p>
+            </div>
+            <div class="food-item">
+                <img src="https://via.placeholder.com/150" alt="Food 3">
+                <h3>Fruit Smoothie</h3>
+                <p>A refreshing blend of mixed fruits and yogurt.</p>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="social-media">
             <a href="https://whatsapp.com/channel/0029Vayz9d3KQuJNblnYq03A" target="_blank" class="social-icon">
@@ -56,5 +177,27 @@
             </a>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            loadHealthVideos();
+        });
+
+        function loadHealthVideos() {
+            const videos = [
+                { title: "10 Minute Full Body Workout", src: "https://www.youtube.com/embed/1SkBf6h2ksI" },
+                { title: "Healthy Eating Tips", src: "https://www.youtube.com/embed/dBnniua6-oM" },
+                { title: "Yoga for Beginners", src: "https://www.youtube.com/embed/v7AYKMP6rOE" }
+            ];
+
+            const videoContainer = document.getElementById('video-container');
+            videos.forEach(video => {
+                const iframe = document.createElement('iframe');
+                iframe.src = video.src;
+                iframe.title = video.title;
+                videoContainer.appendChild(iframe);
+            });
+        }
+    </script>
 </body>
 </html>

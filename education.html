@@ -114,35 +114,55 @@
 
         /* Footer style */
         .footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
 
-.social-media {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
 
-.social-icon {
-    text-decoration: none;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
+        .social-icon {
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
 
-.social-icon i {
-    font-size: 1.5rem;
-}
+        .social-icon i {
+            font-size: 1.5rem;
+        }
 
-.social-icon:hover {
-    color: #ff6b6b;
-}
+        .social-icon:hover {
+            color: #ff6b6b;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+
+            .sub-block {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                width: 95%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -195,97 +215,7 @@
         <section id="engineering">
             <h2 class="section-title">Engineering Education</h2>
             <div class="sub-block">
-                <div>
-                    <h3>ECE</h3>
-                    <ul>
-                        <li><a href="https://www.electronics-tutorials.ws/" target="_blank">Basics of Electronics</a></li>
-                        <li><a href="https://www.coursera.org/courses?query=signals%20and%20systems" target="_blank">Signals and Systems</a></li>
-                        <li><a href="https://www.edx.org/course/communication-systems" target="_blank">Communication Systems</a></li>
-                        <li><a href="https://www.coursera.org/courses?query=advanced%20electronics" target="_blank">Advanced Electronics</a></li>
-                    </ul>
-                    <div class="updates">
-                        <h4>Latest Updates</h4>
-                        <p>New advancements in IoT and Smart Devices.</p>
-                    </div>
-                </div>
-                <div>
-                    <h3>CSE</h3>
-                    <ul>
-                        <li><a href="https://www.codecademy.com/learn/learn-java" target="_blank">Introduction to Programming</a></li>
-                        <li><a href="https://www.geeksforgeeks.org/data-structures/" target="_blank">Data Structures</a></li>
-                        <li><a href="https://www.coursera.org/courses?query=algorithms" target="_blank">Algorithms</a></li>
-                        <li><a href="https://www.coursera.org/learn/machine-learning" target="_blank">Machine Learning</a></li>
-                    </ul>
-                    <div class="updates">
-                        <h4>Latest Updates</h4>
-                        <p>AI trends and new advancements in programming languages.</p>
-                    </div>
-                </div>
-                <div>
-                    <h3>EEE</h3>
-                    <ul>
-                        <li><a href="https://www.allaboutcircuits.com/textbook/" target="_blank">Electrical Circuits</a></li>
-                        <li><a href="https://www.coursera.org/courses?query=power%20systems" target="_blank">Power Systems</a></li>
-                        <li><a href="https://www.khanacademy.org/science/electrical-engineering" target="_blank">Control Systems</a></li>
-                        <li><a href="https://www.coursera.org/courses?query=renewable%20energy" target="_blank">Renewable Energy</a></li>
-                    </ul>
-                    <div class="updates">
-                        <h4>Latest Updates</h4>
-                        <p>Innovations in solar power and electric vehicles.</p>
-                    </div>
-                </div>
-                <div>
-                    <h3>CIVIL</h3>
-                    <ul>
-                        <li><a href="https://www.coursera.org/courses?query=structural%20analysis" target="_blank">Structural Analysis</a></li>
-                        <li><a href="https://www.coursera.org/courses?query=fluid%20mechanics" target="_blank">Fluid Mechanics</a></li>
-                        <li><a href="https://www.coursera.org/courses?query=construction%20management" target="_blank">Construction Management</a></li>
-                        <li><a href="https://www.khanacademy.org/science/physics/forces-and-newtons-laws" target="_blank">Geotechnical Engineering</a></li>
-                    </ul>
-                    <div class="updates">
-                        <h4>Latest Updates</h4>
-                        <p>Smart cities and sustainable construction techniques.</p>
-                    </div>
-                </div>
-                <div>
-                    <h3>MECH</h3>
-                    <ul>
-                        <li><a href="https://www.coursera.org/courses?query=thermodynamics" target="_blank">Thermodynamics</a></li>
-                        <li><a href="https://www.coursera.org/courses?query=fluid%20dynamics" target="_blank">Fluid Dynamics</a></li>
-                        <li><a href="https://www.coursera.org/courses?query=heat%20transfer" target="_blank">Heat Transfer</a></li>
-                        <li><a href="https://www.coursera.org/courses?query=mechatronics" target="_blank">Mechatronics</a></li>
-                    </ul>
-                    <div class="updates">
-                        <h4>Latest Updates</h4>
-                        <p>Advancements in automation and robotics.</p>
-                    </div>
-                </div>
-                <div>
-                    <h3>MME</h3>
-                    <ul>
-                        <li><a href="https://www.coursera.org/courses?query=materials%20science" target="_blank">Materials Science</a></li>
-                        <li><a href="https://ocw.mit.edu/courses/mechanical-engineering/2-75-manufacturing-processes-spring-2007/" target="_blank">Manufacturing Processes</a></li>
-                        <li><a href="https://www.edx.org/learn/nanotechnology" target="_blank">Nanotechnology</a></li>
-                        <li><a href="https://www.coursera.org/courses?query=advanced%20materials" target="_blank">Advanced Materials</a></li>
-                    </ul>
-                    <div class="updates">
-                        <h4>Latest Updates</h4>
-                        <p>New breakthroughs in nanomaterials.</p>
-                    </div>
-                </div>
-                <div>
-                    <h3>CHEM</h3>
-                    <ul>
-                        <li><a href="https://www.khanacademy.org/science/organic-chemistry" target="_blank">Organic Chemistry</a></li>
-                        <li><a href="https://www.chemguide.co.uk/" target="_blank">Inorganic Chemistry</a></li>
-                        <li><a href="https://www.edx.org/course/process-engineering" target="_blank">Process Engineering</a></li>
-                        <li><a href="https://www.coursera.org/courses?query=petrochemical%20engineering" target="_blank">Petrochemical Engineering</a></li>
-                    </ul>
-                    <div class="updates">
-                        <h4>Latest Updates</h4>
-                        <p>Research on green chemistry and sustainable processes.</p>
-                    </div>
-                </div>
+                <!-- Add engineering content here -->
             </div>
         </section>
     </div>

@@ -64,36 +64,68 @@
             background-color: #575757;
         }
 
+        .designer-bio {
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .designer-bio h2 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .designer-bio p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .designer-bio a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .designer-bio a:hover {
+            text-decoration: underline;
+        }
+
         .footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
 
-.social-media {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
 
-.social-icon {
-    text-decoration: none;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
+        .social-icon {
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
 
-.social-icon i {
-    font-size: 1.5rem;
-}
+        .social-icon i {
+            font-size: 1.5rem;
+        }
 
-.social-icon:hover {
-    color: #ff6b6b;
-}
+        .social-icon:hover {
+            color: #ff6b6b;
+        }
 
         .form-group {
             margin-bottom: 20px;
@@ -103,16 +135,6 @@
             height: 150px;
             resize: none;
         }
-        .branch a, .subject a {
-    text-decoration: none; /* Removes underline */
-    color: inherit; /* Keeps the text color the same as the parent element */
-    display: block;
-}
-
-.branch a:hover, .subject a:hover {
-    text-decoration: none; /* Ensures no underline on hover */
-    color: inherit; /* Prevents blue color on hover */
-}
     </style>
 </head>
 <body>
@@ -147,6 +169,17 @@
             <button type="submit">Submit</button>
         </form>
     </div>
+
+    <!-- Designer Bio Section -->
+    <div class="designer-bio">
+        <h2>About the Website Designer</h2>
+        <p>Hello! I'm <strong>Sandeep</strong>, the designer of this website. I specialize in creating user-friendly and visually appealing web applications.</p>
+        <p>If you have any questions or need assistance, feel free to reach out to me directly on WhatsApp.</p>
+        <a href="https://wa.me/9392553121" target="_blank">
+            <i class="fab fa-whatsapp"></i> Chat with me on WhatsApp
+        </a>
+    </div>
+
     <footer class="footer">
         <div class="social-media">
             <a href="https://whatsapp.com/channel/0029Vayz9d3KQuJNblnYq03A" target="_blank" class="social-icon">

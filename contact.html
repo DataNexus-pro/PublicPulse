@@ -103,6 +103,16 @@
             height: 150px;
             resize: none;
         }
+        .branch a, .subject a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Keeps the text color the same as the parent element */
+    display: block;
+}
+
+.branch a:hover, .subject a:hover {
+    text-decoration: none; /* Ensures no underline on hover */
+    color: inherit; /* Prevents blue color on hover */
+}
     </style>
 </head>
 <body>

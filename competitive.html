@@ -10,45 +10,91 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #e0eafc, #cfdef3);
             color: #333;
         }
+
         header {
-            background:  #333;
+            background: linear-gradient(to right, #141e30, #243b55);
             color: #fff;
-            padding: 10px 0;
+            padding: 1.5rem;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         .container {
             width: 80%;
-            margin: auto;
-            overflow: hidden;
+            margin: 30px auto;
             padding: 20px;
         }
+
         h1 {
             margin-bottom: 20px;
+            font-size: 2.5rem;
         }
+
         .subject {
-            background: #fff;
+            background: #ffffff;
             padding: 20px;
-            margin: 10px 0;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        .subject:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
         .subject h2 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subject p {
+            color: #555;
+            font-size: 1rem;
+        }
+
+        .practice-websites {
+            background: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .practice-websites h2 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .practice-websites a {
+            text-decoration: none;
             color: #007bff;
         }
-        .footer {
-            background-color: #333;
+
+        .practice-websites a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: linear-gradient(to right, #141e30, #243b55);
             color: #fff;
             text-align: center;
             padding: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
         }
+
         .social-media {
             display: flex;
             justify-content: center;
             gap: 20px;
         }
+
         .social-icon {
             text-decoration: none;
             color: #fff;
@@ -56,30 +102,26 @@
             align-items: center;
             gap: 10px;
             font-size: 1.2rem;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
+
         .social-icon i {
             font-size: 1.5rem;
         }
+
         .social-icon:hover {
-            color: #ff6b6b;
+            color: #FFD700;
+            transform: scale(1.1);
         }
-        .practice-websites {
-            background: #fff;
-            padding: 20px;
-            margin: 10px 0;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .practice-websites h2 {
-            color: #007bff;
-        }
-        .practice-websites a {
-            text-decoration: none; /* Remove underline */
-            color: #007bff; /* Link color */
-        }
-        .practice-websites a:hover {
-            text-decoration: underline; /* Optional: underline on hover */
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .subject {
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
@@ -87,7 +129,7 @@
 
 <header>
     <h1>Competitive Exams Preparation</h1>
-    <p>Enhance your skills in Arithmetic, Reasoning, Mental Ability, and English</p>
+    <p>Enhance your skills for various competitive exams</p>
 </header>
 
 <div class="container">
@@ -111,6 +153,21 @@
         <p>Enhance your vocabulary, grammar, and comprehension skills. Key for success in all competitive exams.</p>
     </div>
 
+    <div class="subject">
+        <h2>RRB (Railway Recruitment Board)</h2>
+        <p>Prepare for RRB exams with a focus on General Awareness, Arithmetic, and Reasoning.</p>
+    </div>
+
+    <div class="subject">
+        <h2>CGL (Combined Graduate Level)</h2>
+        <p>Crack SSC CGL exams by mastering Quantitative Aptitude, General Awareness, and English.</p>
+    </div>
+
+    <div class="subject">
+        <h2>UPSC (Union Public Service Commission)</h2>
+        <p>Prepare for UPSC exams with a focus on General Studies, Current Affairs, and Essay Writing.</p>
+    </div>
+
     <div class="practice-websites">
         <h2>Practice Questions Websites</h2>
         <ul>
@@ -122,6 +179,7 @@
         </ul>
     </div>
 </div>
+
 <footer class="footer">
     <div class="social-media">
         <a href="https://whatsapp.com/channel/0029Vayz9d3KQuJNblnYq03A" target="_blank" class="social-icon">

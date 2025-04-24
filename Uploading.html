@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uploading</title>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f8ff;
-        }
-        #movingText {
-            position: absolute;
-            font-size: 2rem;
-            font-weight: bold;
-            color: #ff4500;
-            animation: moveAround 5s linear infinite, colorChange 2s linear infinite;
-        }
-        @keyframes moveAround {
-            0% { top: 0; left: 0; }
-            25% { top: 0; left: 80%; }
-            50% { top: 80%; left: 80%; }
-            75% { top: 80%; left: 0; }
-            100% { top: 0; left: 0; }
-        }
-        @keyframes colorChange {
-            0% { color: #ff4500; }
-            25% { color: #32cd32; }
-            50% { color: #1e90ff; }
-            75% { color: #ff1493; }
-            100% { color: #ff4500; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Uploading Data Soon</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 500px;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .loader {
+      border: 8px solid rgba(255, 255, 255, 0.2);
+      border-top: 8px solid #fff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      margin: 0 auto;
+      animation: spin 1.2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
-    <div id="movingText">Uploading Data Soon...</div>
+  <div class="container">
+    <h1>Uploading Data Soon</h1>
+    <p>Please check back shortly while we prepare everything.</p>
+    <div class="loader"></div>
+  </div>
 </body>
 </html>

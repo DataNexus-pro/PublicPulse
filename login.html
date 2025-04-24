@@ -5,169 +5,220 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Form</title>
   <style>
-	@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Open Sans", sans-serif;
+    }
 
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  width: 100%;
-  padding: 0 10px;
-}
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      width: 100%;
+      padding: 0 10px;
+      background: url("hill.jpg"), #000;
+      background-position: center;
+      background-size: cover;
+    }
 
-body::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url("hill.jpg"), #000;
-  background-position: center;
-  background-size: cover;
-}
+    .wrapper {
+      width: 400px;
+      border-radius: 8px;
+      padding: 30px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(9px);
+      -webkit-backdrop-filter: blur(9px);
+      background: rgba(0, 0, 0, 0.5);
+    }
 
-.wrapper {
-  width: 400px;
-  border-radius: 8px;
-  padding: 30px;
-  text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
-}
+    form {
+      display: flex;
+      flex-direction: column;
+    }
 
-form {
-  display: flex;
-  flex-direction: column;
-}
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #fff;
+    }
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #fff;
-}
+    .input-field {
+      position: relative;
+      border-bottom: 2px solid #ccc;
+      margin: 15px 0;
+    }
 
-.input-field {
-  position: relative;
-  border-bottom: 2px solid #ccc;
-  margin: 15px 0;
-}
+    .input-field label {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      color: #fff;
+      font-size: 16px;
+      pointer-events: none;
+      transition: 0.15s ease;
+    }
 
-.input-field label {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  color: #fff;
-  font-size: 16px;
-  pointer-events: none;
-  transition: 0.15s ease;
-}
+    .input-field input {
+      width: 100%;
+      height: 40px;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      color: #fff;
+    }
 
-.input-field input {
-  width: 100%;
-  height: 40px;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  color: #fff;
-}
+    .input-field input:focus~label,
+    .input-field input:valid~label {
+      font-size: 0.8rem;
+      top: 10px;
+      transform: translateY(-120%);
+    }
 
-.input-field input:focus~label,
-.input-field input:valid~label {
-  font-size: 0.8rem;
-  top: 10px;
-  transform: translateY(-120%);
-}
+    .forget {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 25px 0 35px 0;
+      color: #fff;
+    }
 
-.forget {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 25px 0 35px 0;
-  color: #fff;
-}
+    #remember {
+      accent-color: #fff;
+    }
 
-#remember {
-  accent-color: #fff;
-}
+    .forget label {
+      display: flex;
+      align-items: center;
+    }
 
-.forget label {
-  display: flex;
-  align-items: center;
-}
+    .forget label p {
+      margin-left: 8px;
+    }
 
-.forget label p {
-  margin-left: 8px;
-}
+    .wrapper a {
+      color: #efefef;
+      text-decoration: none;
+    }
 
-.wrapper a {
-  color: #efefef;
-  text-decoration: none;
-}
+    .wrapper a:hover {
+      text-decoration: underline;
+    }
 
-.wrapper a:hover {
-  text-decoration: underline;
-}
+    button {
+      background: #fff;
+      color: #000;
+      font-weight: 600;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 3px;
+      font-size: 16px;
+      border: 2px solid transparent;
+      transition: 0.3s ease;
+    }
 
-button {
-  background: #fff;
-  color: #000;
-  font-weight: 600;
-  border: none;
-  padding: 12px 20px;
-  cursor: pointer;
-  border-radius: 3px;
-  font-size: 16px;
-  border: 2px solid transparent;
-  transition: 0.3s ease;
-}
+    button:hover {
+      color: #fff;
+      border-color: #fff;
+      background: rgba(255, 255, 255, 0.15);
+    }
 
-button:hover {
-  color: #fff;
-  border-color: #fff;
-  background: rgba(255, 255, 255, 0.15);
-}
+    .register {
+      text-align: center;
+      margin-top: 30px;
+      color: #fff;
+    }
 
-.register {
-  text-align: center;
-  margin-top: 30px;
-  color: #fff;
-}
+    .toggle-link {
+      color: #4CAF50;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .toggle-link:hover {
+      text-decoration: underline;
+    }
+
+    .manual-login {
+      display: none;
+    }
   </style>
 </head>
 <body>
   <div class="wrapper">
-    <form action="#">
-      <h2>Login</h2>
+    <!-- Default Login Form -->
+    <div class="default-login">
+      <form action="#">
+        <h2>Login</h2>
         <div class="input-field">
-        <input type="text" required>
-        <label>Enter your email</label>
-      </div>
-      <div class="input-field">
-        <input type="password" required>
-        <label>Enter your password</label>
-      </div>
-      <div class="forget">
-        <label for="remember">
-          <input type="checkbox" id="remember">
-          <p>Remember me</p>
-        </label>
-        <a href="#">Forgot password?</a>
-      </div>
-      <button type="submit">Log In</button>
-      <div class="register">
-        <p>Don't have an account? <a href="register.html">Register</a></p>
-      </div>
-    </form>
+          <input type="text" required>
+          <label>Enter your email</label>
+        </div>
+        <div class="input-field">
+          <input type="password" required>
+          <label>Enter your password</label>
+        </div>
+        <div class="forget">
+          <label for="remember">
+            <input type="checkbox" id="remember">
+            <p>Remember me</p>
+          </label>
+          <a href="#">Forgot password?</a>
+        </div>
+        <button type="submit">Log In</button>
+        <div class="register">
+          <p>Don't have an account? <a href="register.html">Register</a></p>
+        </div>
+      </form>
+      <p><a class="toggle-link" onclick="toggleLogin()">Switch to Manual Login</a></p>
+    </div>
+
+    <!-- Manual Login Form -->
+    <div class="manual-login">
+      <h2>Manual Login</h2>
+      <input type="email" id="email" placeholder="Email" /><br />
+      <input type="password" id="password" placeholder="Password" /><br />
+      <button onclick="login()">Login</button>
+      <p><a class="toggle-link" onclick="toggleLogin()">Switch to Default Login</a></p>
+    </div>
   </div>
+
+  <script src="firebase-config.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
+  <script>
+    function toggleLogin() {
+      const defaultLogin = document.querySelector('.default-login');
+      const manualLogin = document.querySelector('.manual-login');
+      defaultLogin.style.display = defaultLogin.style.display === 'none' ? 'block' : 'none';
+      manualLogin.style.display = manualLogin.style.display === 'none' ? 'block' : 'none';
+    }
+
+    async function login() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      const snapshot = await firebase.database().ref("users/" + btoa(email)).get();
+      if (!snapshot.exists()) {
+        alert("User not found");
+        return;
+      }
+
+      const data = snapshot.val();
+      if (atob(data.password) === password) {
+        alert("Login successful!");
+        // redirect to dashboard
+      } else {
+        alert("Wrong password");
+      }
+    }
+  </script>
 </body>
 </html>
